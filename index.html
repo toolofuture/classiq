@@ -86,6 +86,7 @@
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
             aspect-ratio: 16/9;
+            background-color: #0d1117;
         }
 
         .gallery img {
@@ -110,11 +111,21 @@
         }
 
         .tag {
-            display: block;
-            font-size: 0.8em;
-            color: #8b949e;
-            margin-top: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 0.7em;
+            padding: 5px;
             text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .tag {
+            opacity: 1;
         }
     </style>
 </head>
@@ -123,77 +134,99 @@
 
     <header>
         <h1>이스라엘 Classiq 퀀텀 플랫폼 사용기</h1>
-        <p class="subtitle">2026.02.19 ~ 2026.02.21 일지</p>
+        <p class="subtitle">2026.02.20 작업 기록</p>
     </header>
 
     <div class="container">
 
         <section class="day-section">
-            <h2>02월 19일 (0219 통합)</h2>
-            <p style="color: #8b949e; margin-bottom: 20px;">2.19 ~ 2.28 폴더에서 통합된 28개의 캡처 기록입니다.</p>
+            <h2>02월 20일 기록 (통합 46개)</h2>
+            <p style="color: #8b949e; margin-bottom: 20px;">2월 20일에 집중적으로 진행된 모든 Classiq 플랫폼 활용 내역입니다.</p>
             <div class="gallery">
-                <!-- 2.19 ~ 2.28 통합 이미지 28개 -->
-                <div class="gallery-item"><img src="0219/2.19_1.png" alt="2.19_1"><span class="tag">2.19_1</span></div>
-                <div class="gallery-item"><img src="0219/2.19_2.png" alt="2.19_2"><span class="tag">2.19_2</span></div>
-                <div class="gallery-item"><img src="0219/2.19_3.png" alt="2.19_3"><span class="tag">2.19_3</span></div>
-                <div class="gallery-item"><img src="0219/2.20_1.png" alt="2.20_1"><span class="tag">2.20_1</span></div>
-                <div class="gallery-item"><img src="0219/2.20_2.png" alt="2.20_2"><span class="tag">2.20_2</span></div>
-                <div class="gallery-item"><img src="0219/2.20_3.png" alt="2.20_3"><span class="tag">2.20_3</span></div>
-                <div class="gallery-item"><img src="0219/2.21_1.png" alt="2.21_1"><span class="tag">2.21_1</span></div>
-                <div class="gallery-item"><img src="0219/2.21_2.png" alt="2.21_2"><span class="tag">2.21_2</span></div>
-                <div class="gallery-item"><img src="0219/2.21_3.png" alt="2.21_3"><span class="tag">2.21_3</span></div>
-                <div class="gallery-item"><img src="0219/2.22_1.png" alt="2.22_1"><span class="tag">2.22_1</span></div>
-                <div class="gallery-item"><img src="0219/2.22_2.png" alt="2.22_2"><span class="tag">2.22_2</span></div>
-                <div class="gallery-item"><img src="0219/2.22_3.png" alt="2.22_3"><span class="tag">2.22_3</span></div>
-                <div class="gallery-item"><img src="0219/2.23_1.png" alt="2.23_1"><span class="tag">2.23_1</span></div>
-                <div class="gallery-item"><img src="0219/2.23_2.png" alt="2.23_2"><span class="tag">2.23_2</span></div>
-                <div class="gallery-item"><img src="0219/2.23_3.png" alt="2.23_3"><span class="tag">2.23_3</span></div>
-                <div class="gallery-item"><img src="0219/2.24_1.png" alt="2.24_1"><span class="tag">2.24_1</span></div>
-                <div class="gallery-item"><img src="0219/2.24_2.png" alt="2.24_2"><span class="tag">2.24_2</span></div>
-                <div class="gallery-item"><img src="0219/2.24_3.png" alt="2.24_3"><span class="tag">2.24_3</span></div>
-                <div class="gallery-item"><img src="0219/2.25_1.png" alt="2.25_1"><span class="tag">2.25_1</span></div>
-                <div class="gallery-item"><img src="0219/2.25_2.png" alt="2.25_2"><span class="tag">2.25_2</span></div>
-                <div class="gallery-item"><img src="0219/2.25_3.png" alt="2.25_3"><span class="tag">2.25_3</span></div>
-                <div class="gallery-item"><img src="0219/2.26_1.png" alt="2.26_1"><span class="tag">2.26_1</span></div>
-                <div class="gallery-item"><img src="0219/2.26_2.png" alt="2.26_2"><span class="tag">2.26_2</span></div>
-                <div class="gallery-item"><img src="0219/2.26_3.png" alt="2.26_3"><span class="tag">2.26_3</span></div>
-                <div class="gallery-item"><img src="0219/2.27_1.png" alt="2.27_1"><span class="tag">2.27_1</span></div>
-                <div class="gallery-item"><img src="0219/2.27_2.png" alt="2.27_2"><span class="tag">2.27_2</span></div>
-                <div class="gallery-item"><img src="0219/2.27_3.png" alt="2.27_3"><span class="tag">2.27_3</span></div>
-                <div class="gallery-item"><img src="0219/2.28_1.png" alt="2.28_1"><span class="tag">2.28_1</span></div>
-            </div>
-        </section>
+                <!-- 2.19~2.28에서 옮겨온 이미지들 -->
+                <div class="gallery-item"><img src="0220/2.19_1.png" alt="Capture"><span class="tag">Process-1</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.19_2.png" alt="Capture"><span class="tag">Process-2</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.19_3.png" alt="Capture"><span class="tag">Process-3</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.20_1.png" alt="Capture"><span class="tag">Process-4</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.20_2.png" alt="Capture"><span class="tag">Process-5</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.20_3.png" alt="Capture"><span class="tag">Process-6</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.21_1.png" alt="Capture"><span class="tag">Process-7</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.21_2.png" alt="Capture"><span class="tag">Process-8</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.21_3.png" alt="Capture"><span class="tag">Process-9</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.22_1.png" alt="Capture"><span class="tag">Process-10</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.22_2.png" alt="Capture"><span class="tag">Process-11</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.22_3.png" alt="Capture"><span class="tag">Process-12</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.23_1.png" alt="Capture"><span class="tag">Process-13</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.23_2.png" alt="Capture"><span class="tag">Process-14</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.23_3.png" alt="Capture"><span class="tag">Process-15</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.24_1.png" alt="Capture"><span class="tag">Process-16</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.24_2.png" alt="Capture"><span class="tag">Process-17</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.24_3.png" alt="Capture"><span class="tag">Process-18</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.25_1.png" alt="Capture"><span class="tag">Process-19</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.25_2.png" alt="Capture"><span class="tag">Process-20</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.25_3.png" alt="Capture"><span class="tag">Process-21</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.26_1.png" alt="Capture"><span class="tag">Process-22</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.26_2.png" alt="Capture"><span class="tag">Process-23</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.26_3.png" alt="Capture"><span class="tag">Process-24</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.27_1.png" alt="Capture"><span class="tag">Process-25</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.27_2.png" alt="Capture"><span class="tag">Process-26</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.27_3.png" alt="Capture"><span class="tag">Process-27</span>
+                </div>
+                <div class="gallery-item"><img src="0220/2.28_1.png" alt="Capture"><span class="tag">Process-28</span>
+                </div>
 
-        <section class="day-section">
-            <h2>02월 20일 (0220)</h2>
-            <p style="color: #8b949e; margin-bottom: 20px;">바탕화면에서 수집된 18개의 일지 기록입니다.</p>
-            <div class="gallery">
-                <!-- 0220 폴더 내 이미지들 -->
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.40.46.png" alt="캡처 1"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.44.40.png" alt="캡처 2"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.47.39.png" alt="캡처 3"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.59.20.png" alt="캡처 4"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.03.46.png" alt="캡처 5"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.03.51.png" alt="캡처 6"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.07.04.png" alt="캡처 7"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.17.43.png" alt="캡처 8"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.22.42.png" alt="캡처 9"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.26.10.png" alt="캡처 10"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.29.45.png" alt="캡처 11"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.38.10.png" alt="캡처 12"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.41.26.png" alt="캡처 13"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.46.07.png" alt="캡처 14"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.48.04.png" alt="캡처 15"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.49.25.png" alt="캡처 16"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.50.29.png" alt="캡처 17"></div>
-                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 2.20.23.png" alt="캡처 18"></div>
+                <!-- 원래 0220에 있던 바탕화면 이미지들 -->
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.40.46.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.44.40.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.47.39.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 10.59.20.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.03.46.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.03.51.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.07.04.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.17.43.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.22.42.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.26.10.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.29.45.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.38.10.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.41.26.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.46.07.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.48.04.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.49.25.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 11.50.29.png" alt="Capture"></div>
+                <div class="gallery-item"><img src="0220/스크린샷 2026-02-20 오전 2.20.23.png" alt="Capture"></div>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 퀀텀 플랫폼 사용기록. 꾸준한 학습의 기록입니다.</p>
+        <p>&copy; 2026 퀀텀 플랫폼 사용기록. 2월 20일의 성과물입니다.</p>
     </footer>
 
 </body>
